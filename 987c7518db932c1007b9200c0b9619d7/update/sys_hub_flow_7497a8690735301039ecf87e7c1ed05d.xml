@@ -1,0 +1,727 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <compiler_build>glide-quebec-12-09-2020__patch1-02-18-2021</compiler_build>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <internal_name>crear_viales_desde_record_producer</internal_name>
+        <label_cache>[{"name":"b80f5da1-d91e-4d91-877e-8e50846b2373.item.doses","label":"2➛Vaccine Vials➛Doses","reference":"","reference_display":"","type":"integer","base_type":"integer","column_name":"","attributes":{"catalogType":"4","catalogTypeLabel":"Numeric Scale"}},{"name":"d359e7eb-3d08-4eba-857d-560e101f0169.table_name","label":"3➛Vial Table","reference":"x_snc_vac_mfgr_lab_vial","reference_display":"Vial","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"d359e7eb-3d08-4eba-857d-560e101f0169.record","label":"3➛Vial Record","reference":"x_snc_vac_mfgr_lab_vial","reference_display":"Vial","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"b80f5da1-d91e-4d91-877e-8e50846b2373.item","label":"2➛Vaccine Vials","reference_display":"Vaccine Vials","type":"object","base_type":"object","attributes":{"pills_draggable_inside_block":"true","pills_draggable_outside_block":"false"}},{"name":"eeeb5674-0828-4a04-8d52-2a3724b42194.vaccine_vials","label":"1➛vaccine_vials","reference":"","reference_display":"vaccine_vials","type":"array.object","base_type":"array.object","attributes":{"child_label":"Vaccine Vials","child_type_label":"Object","child_type":"object","child_name":"vaccine_vials"}},{"name":"subflow.vaccine_batch_record","label":"Input➛Vaccine batch record","reference":"x_snc_vac_mfgr_lab_vaccine_batch","reference_display":"Vaccine Batch","type":"reference","base_type":"reference","attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"75dcf794-9ebd-433b-b8cc-950617359195"}}]</label_cache>
+        <latest_snapshot>2d5a602d0735301039ecf87e7c1ed0b1</latest_snapshot>
+        <master_snapshot>f1e8e8a90735301039ecf87e7c1ed0dd</master_snapshot>
+        <name>Crear viales desde Record Producer</name>
+        <natlang/>
+        <outputs/>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-05 18:05:36</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>7497a8690735301039ecf87e7c1ed05d</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Crear viales desde Record Producer</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Vaccine Manufacturing &amp; Logistics" source="x_snc_vac_mfgr_lab">987c7518db932c1007b9200c0b9619d7</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Vaccine Manufacturing &amp; Logistics">987c7518db932c1007b9200c0b9619d7</sys_scope>
+        <sys_update_name>sys_hub_flow_7497a8690735301039ecf87e7c1ed05d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-05 18:11:26</sys_updated_on>
+        <type>subflow</type>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=7497a8690735301039ecf87e7c1ed05d"/>
+    <sys_variable_value action="delete_multiple" query="document_key=7497a8690735301039ecf87e7c1ed05d"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=7497a8690735301039ecf87e7c1ed05d^sys_idNOT INbc97a8690735301039ecf87e7c1ed05f"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>7497a8690735301039ecf87e7c1ed05d</id>
+        <name>Crear viales desde Record Producer</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-05 18:05:36</sys_created_on>
+        <sys_id>bc97a8690735301039ecf87e7c1ed05f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-05 18:05:36</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_hub_flow_input action="delete_multiple" query="model=7497a8690735301039ecf87e7c1ed05d^sys_idNOT INd8e8a8a90735301039ecf87e7c1ed0f1"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=75dcf794-9ebd-433b-b8cc-950617359195</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table>x_snc_vac_mfgr_lab_vaccine_batch</choice_table>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>vaccine_batch_record</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>Vaccine batch record</label>
+        <mandatory>false</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Crear viales desde Record Producer">7497a8690735301039ecf87e7c1ed05d</model>
+        <model_id>7497a8690735301039ecf87e7c1ed05d</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_7497a8690735301039ecf87e7c1ed05d</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference display_value="" name="x_snc_vac_mfgr_lab_vaccine_batch">x_snc_vac_mfgr_lab_vaccine_batch</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-05 18:11:18</sys_created_on>
+        <sys_id>d8e8a8a90735301039ecf87e7c1ed0f1</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Vaccine Manufacturing &amp; Logistics">987c7518db932c1007b9200c0b9619d7</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-05 18:11:18</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_instance action="delete_multiple" query="flow=7497a8690735301039ecf87e7c1ed05d^sys_idNOT IN68e8e8a90735301039ecf87e7c1ed01d,e8e8e8a90735301039ecf87e7c1ed004"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot>2de05916c31332002841b63b12d3aee1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Crear viales desde Record Producer">7497a8690735301039ecf87e7c1ed05d</flow>
+        <order>3</order>
+        <parent_ui_id>b80f5da1-d91e-4d91-877e-8e50846b2373</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-05 18:11:19</sys_created_on>
+        <sys_id>68e8e8a90735301039ecf87e7c1ed01d</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_scope display_value="Vaccine Manufacturing &amp; Logistics">987c7518db932c1007b9200c0b9619d7</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-05 18:17:40</sys_updated_on>
+        <ui_id>d359e7eb-3d08-4eba-857d-560e101f0169</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=68e8e8a90735301039ecf87e7c1ed01d"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>68e8e8a90735301039ecf87e7c1ed01d</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-05 18:11:19</sys_created_on>
+        <sys_id>e8e8e8a90735301039ecf87e7c1ed02b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-05 18:11:19</sys_updated_on>
+        <value>x_snc_vac_mfgr_lab_vial</value>
+        <variable display_value="Table">61e05916c31332002841b63b12d3aee4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=68e8e8a90735301039ecf87e7c1ed01d"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>68e8e8a90735301039ecf87e7c1ed01d</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-05 18:11:19</sys_created_on>
+        <sys_id>a4e8e8a90735301039ecf87e7c1ed02b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-05 18:11:19</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2de05916c31332002841b63b12d3aee1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>68e8e8a90735301039ecf87e7c1ed01d</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-05 18:11:19</sys_created_on>
+        <sys_id>68e8e8a90735301039ecf87e7c1ed02b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-05 18:11:19</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2de05916c31332002841b63b12d3aee1</table>
+        <value>batch={{subflow.vaccine_batch_record}}^doses={{b80f5da1-d91e-4d91-877e-8e50846b2373.item.doses}}</value>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Get Catalog Variables">330ba3abc31013002841b63b12d3aee8</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot>330ba3abc31013002841b63b12d3aee8</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Crear viales desde Record Producer">7497a8690735301039ecf87e7c1ed05d</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-05 18:11:18</sys_created_on>
+        <sys_id>e8e8e8a90735301039ecf87e7c1ed004</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_scope display_value="Vaccine Manufacturing &amp; Logistics">987c7518db932c1007b9200c0b9619d7</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-05 18:17:40</sys_updated_on>
+        <ui_id>eeeb5674-0828-4a04-8d52-2a3724b42194</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=e8e8e8a90735301039ecf87e7c1ed004"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>e8e8e8a90735301039ecf87e7c1ed004</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-05 18:11:18</sys_created_on>
+        <sys_id>24e8e8a90735301039ecf87e7c1ed014</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-05 18:11:18</sys_updated_on>
+        <value>bafbeccedbdf205007b9200c0b961961:item_option_new_set</value>
+        <variable display_value="Catalog Variables">7b0ba3abc31013002841b63b12d3aef7</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>e8e8e8a90735301039ecf87e7c1ed004</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-05 18:11:18</sys_created_on>
+        <sys_id>ace8e8a90735301039ecf87e7c1ed014</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-05 18:11:18</sys_updated_on>
+        <value>68dba8cedbdf205007b9200c0b9619e8</value>
+        <variable display_value="Template Catalog Items and Variable Sets">bb0ba3abc31013002841b63b12d3aef1</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=e8e8e8a90735301039ecf87e7c1ed004"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>catalog_variables</field>
+        <id>e8e8e8a90735301039ecf87e7c1ed004</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-05 18:11:18</sys_created_on>
+        <sys_id>a4e8e8a90735301039ecf87e7c1ed013</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-05 18:11:18</sys_updated_on>
+        <table>var__m_sys_hub_action_input_330ba3abc31013002841b63b12d3aee8</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>requested_item</field>
+        <id>e8e8e8a90735301039ecf87e7c1ed004</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-05 18:11:18</sys_created_on>
+        <sys_id>a0e8e8a90735301039ecf87e7c1ed014</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-05 18:11:18</sys_updated_on>
+        <table>var__m_sys_hub_action_input_330ba3abc31013002841b63b12d3aee8</table>
+        <value>{{subflow.vaccine_batch_record}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>template_catalog_item</field>
+        <id>e8e8e8a90735301039ecf87e7c1ed004</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-05 18:11:18</sys_created_on>
+        <sys_id>ece8e8a90735301039ecf87e7c1ed013</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-05 18:11:18</sys_updated_on>
+        <table>var__m_sys_hub_action_input_330ba3abc31013002841b63b12d3aee8</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_flow_logic action="delete_multiple" query="flow=7497a8690735301039ecf87e7c1ed05d^sys_idNOT INe0e8e8a90735301039ecf87e7c1ed016"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">24e8e8a90735301039ecf87e7c1ed015</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Crear viales desde Record Producer">7497a8690735301039ecf87e7c1ed05d</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="For Each">098e1dc5c3e232002841b63b12d3ae33</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-05 18:11:18</sys_created_on>
+        <sys_id>e0e8e8a90735301039ecf87e7c1ed016</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="Vaccine Manufacturing &amp; Logistics">987c7518db932c1007b9200c0b9619d7</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-05 18:11:26</sys_updated_on>
+        <ui_id>b80f5da1-d91e-4d91-877e-8e50846b2373</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=e0e8e8a90735301039ecf87e7c1ed016"/>
+    <sys_element_mapping action="delete_multiple" query="id=e0e8e8a90735301039ecf87e7c1ed016"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>items</field>
+        <id>e0e8e8a90735301039ecf87e7c1ed016</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-05 18:11:19</sys_created_on>
+        <sys_id>ace8e8a90735301039ecf87e7c1ed019</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-05 18:11:19</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_098e1dc5c3e232002841b63b12d3ae33</table>
+        <value>{{eeeb5674-0828-4a04-8d52-2a3724b42194.vaccine_vials}}</value>
+    </sys_element_mapping>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_7497a8690735301039ecf87e7c1ed05d^sys_idNOT INe8e8a8a90735301039ecf87e7c1ed0fc"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>vaccine_batch_record</element>
+        <help/>
+        <hint/>
+        <label>Vaccine batch record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_7497a8690735301039ecf87e7c1ed05d</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-05 18:11:18</sys_created_on>
+        <sys_id>e8e8a8a90735301039ecf87e7c1ed0fc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Vaccine Manufacturing &amp; Logistics" source="x_snc_vac_mfgr_lab">987c7518db932c1007b9200c0b9619d7</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Vaccine Manufacturing &amp; Logistics">987c7518db932c1007b9200c0b9619d7</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-05 18:11:18</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=7497a8690735301039ecf87e7c1ed05d^sys_idNOT IN9ee82ca90735301039ecf87e7c1ed03d"/>
+    <sys_flow_subflow_plan action="INSERT_OR_UPDATE">
+        <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_subflow_plan","id":"9ee82ca90735301039ecf87e7c1ed03d","name":"plan"}}</plan>
+        <plan_id display_value="Crear viales desde Record Producer">7497a8690735301039ecf87e7c1ed05d</plan_id>
+        <snapshot>2d5a602d0735301039ecf87e7c1ed0b1</snapshot>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-05 18:11:25</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>9ee82ca90735301039ecf87e7c1ed03d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-05 18:11:25</sys_updated_on>
+    </sys_flow_subflow_plan>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <internal_name>crear_viales_desde_record_producer</internal_name>
+        <label_cache>[{"name":"b80f5da1-d91e-4d91-877e-8e50846b2373.item.doses","label":"2➛Vaccine Vials➛Doses","reference":"","reference_display":"","type":"integer","base_type":"integer","column_name":"","attributes":{"catalogType":"4","catalogTypeLabel":"Numeric Scale"}},{"name":"d359e7eb-3d08-4eba-857d-560e101f0169.table_name","label":"3➛Vial Table","reference":"x_snc_vac_mfgr_lab_vial","reference_display":"Vial","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"d359e7eb-3d08-4eba-857d-560e101f0169.record","label":"3➛Vial Record","reference":"x_snc_vac_mfgr_lab_vial","reference_display":"Vial","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"b80f5da1-d91e-4d91-877e-8e50846b2373.item","label":"2➛Vaccine Vials","reference_display":"Vaccine Vials","type":"object","base_type":"object","attributes":{"pills_draggable_inside_block":"true","pills_draggable_outside_block":"false"}},{"name":"eeeb5674-0828-4a04-8d52-2a3724b42194.vaccine_vials","label":"1➛vaccine_vials","reference":"","reference_display":"vaccine_vials","type":"array.object","base_type":"array.object","attributes":{"child_label":"Vaccine Vials","child_type_label":"Object","child_type":"object","child_name":"vaccine_vials"}},{"name":"subflow.vaccine_batch_record","label":"Input➛Vaccine batch record","reference":"x_snc_vac_mfgr_lab_vaccine_batch","reference_display":"Vaccine Batch","type":"reference","base_type":"reference","attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"75dcf794-9ebd-433b-b8cc-950617359195"}}]</label_cache>
+        <master>true</master>
+        <name>Crear viales desde Record Producer</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="Crear viales desde Record Producer">7497a8690735301039ecf87e7c1ed05d</parent_flow>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-05 18:11:24</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>f1e8e8a90735301039ecf87e7c1ed0dd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Vaccine Manufacturing &amp; Logistics">987c7518db932c1007b9200c0b9619d7</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-05 18:11:24</sys_updated_on>
+        <type>subflow</type>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=f1e8e8a90735301039ecf87e7c1ed0dd"/>
+    <sys_variable_value action="delete_multiple" query="document_key=f1e8e8a90735301039ecf87e7c1ed0dd"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=f1e8e8a90735301039ecf87e7c1ed0dd^sys_idNOT INf1e8e8a90735301039ecf87e7c1ed0de"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>f1e8e8a90735301039ecf87e7c1ed0dd</id>
+        <name>Crear viales desde Record Producer</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-05 18:11:24</sys_created_on>
+        <sys_id>f1e8e8a90735301039ecf87e7c1ed0de</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-05 18:11:24</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_hub_flow_input action="delete_multiple" query="model=f1e8e8a90735301039ecf87e7c1ed0dd^sys_idNOT INf9e8e8a90735301039ecf87e7c1ed0df"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=75dcf794-9ebd-433b-b8cc-950617359195</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table>x_snc_vac_mfgr_lab_vaccine_batch</choice_table>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>vaccine_batch_record</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>Vaccine batch record</label>
+        <mandatory>false</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Crear viales desde Record Producer">f1e8e8a90735301039ecf87e7c1ed0dd</model>
+        <model_id>f1e8e8a90735301039ecf87e7c1ed0dd</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_f1e8e8a90735301039ecf87e7c1ed0dd</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference display_value="" name="x_snc_vac_mfgr_lab_vaccine_batch">x_snc_vac_mfgr_lab_vaccine_batch</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-05 18:11:24</sys_created_on>
+        <sys_id>f9e8e8a90735301039ecf87e7c1ed0df</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Vaccine Manufacturing &amp; Logistics">987c7518db932c1007b9200c0b9619d7</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-05 18:11:24</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_instance action="delete_multiple" query="flow=f1e8e8a90735301039ecf87e7c1ed0dd^sys_idNOT IN42e82ca90735301039ecf87e7c1ed017,c2e82ca90735301039ecf87e7c1ed010"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <comment/>
+        <compiled_snapshot>2de05916c31332002841b63b12d3aee1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Crear viales desde Record Producer">f1e8e8a90735301039ecf87e7c1ed0dd</flow>
+        <order>3</order>
+        <parent_ui_id>b80f5da1-d91e-4d91-877e-8e50846b2373</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-05 18:11:24</sys_created_on>
+        <sys_id>42e82ca90735301039ecf87e7c1ed017</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Vaccine Manufacturing &amp; Logistics">987c7518db932c1007b9200c0b9619d7</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-05 18:11:24</sys_updated_on>
+        <ui_id>d359e7eb-3d08-4eba-857d-560e101f0169</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=42e82ca90735301039ecf87e7c1ed017"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>42e82ca90735301039ecf87e7c1ed017</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-05 18:11:24</sys_created_on>
+        <sys_id>46e82ca90735301039ecf87e7c1ed018</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-05 18:11:24</sys_updated_on>
+        <value>x_snc_vac_mfgr_lab_vial</value>
+        <variable display_value="Table">61e05916c31332002841b63b12d3aee4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=42e82ca90735301039ecf87e7c1ed017"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>42e82ca90735301039ecf87e7c1ed017</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-05 18:11:24</sys_created_on>
+        <sys_id>02e82ca90735301039ecf87e7c1ed018</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-05 18:11:24</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2de05916c31332002841b63b12d3aee1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>42e82ca90735301039ecf87e7c1ed017</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-05 18:11:24</sys_created_on>
+        <sys_id>c2e82ca90735301039ecf87e7c1ed018</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-05 18:11:24</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2de05916c31332002841b63b12d3aee1</table>
+        <value>batch={{subflow.vaccine_batch_record}}^doses={{b80f5da1-d91e-4d91-877e-8e50846b2373.item.doses}}</value>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Get Catalog Variables">330ba3abc31013002841b63b12d3aee8</action_type>
+        <action_type_parent display_value="Get Catalog Variables">22f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <comment/>
+        <compiled_snapshot>330ba3abc31013002841b63b12d3aee8</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Crear viales desde Record Producer">f1e8e8a90735301039ecf87e7c1ed0dd</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-05 18:11:24</sys_created_on>
+        <sys_id>c2e82ca90735301039ecf87e7c1ed010</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Vaccine Manufacturing &amp; Logistics">987c7518db932c1007b9200c0b9619d7</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-05 18:11:24</sys_updated_on>
+        <ui_id>eeeb5674-0828-4a04-8d52-2a3724b42194</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=c2e82ca90735301039ecf87e7c1ed010"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>c2e82ca90735301039ecf87e7c1ed010</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-05 18:11:24</sys_created_on>
+        <sys_id>0ee82ca90735301039ecf87e7c1ed011</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-05 18:11:24</sys_updated_on>
+        <value>bafbeccedbdf205007b9200c0b961961:item_option_new_set</value>
+        <variable display_value="Catalog Variables">7b0ba3abc31013002841b63b12d3aef7</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>c2e82ca90735301039ecf87e7c1ed010</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-05 18:11:24</sys_created_on>
+        <sys_id>cee82ca90735301039ecf87e7c1ed011</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-05 18:11:24</sys_updated_on>
+        <value>68dba8cedbdf205007b9200c0b9619e8</value>
+        <variable display_value="Template Catalog Items and Variable Sets">bb0ba3abc31013002841b63b12d3aef1</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=c2e82ca90735301039ecf87e7c1ed010"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>catalog_variables</field>
+        <id>c2e82ca90735301039ecf87e7c1ed010</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-05 18:11:24</sys_created_on>
+        <sys_id>06e82ca90735301039ecf87e7c1ed011</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-05 18:11:24</sys_updated_on>
+        <table>var__m_sys_hub_action_input_330ba3abc31013002841b63b12d3aee8</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>requested_item</field>
+        <id>c2e82ca90735301039ecf87e7c1ed010</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-05 18:11:24</sys_created_on>
+        <sys_id>8ae82ca90735301039ecf87e7c1ed011</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-05 18:11:24</sys_updated_on>
+        <table>var__m_sys_hub_action_input_330ba3abc31013002841b63b12d3aee8</table>
+        <value>{{subflow.vaccine_batch_record}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>template_catalog_item</field>
+        <id>c2e82ca90735301039ecf87e7c1ed010</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-05 18:11:24</sys_created_on>
+        <sys_id>c6e82ca90735301039ecf87e7c1ed011</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-05 18:11:24</sys_updated_on>
+        <table>var__m_sys_hub_action_input_330ba3abc31013002841b63b12d3aee8</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_flow_logic action="delete_multiple" query="flow=f1e8e8a90735301039ecf87e7c1ed0dd^sys_idNOT IN8ee82ca90735301039ecf87e7c1ed007"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">24e8e8a90735301039ecf87e7c1ed015</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Crear viales desde Record Producer">f1e8e8a90735301039ecf87e7c1ed0dd</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="For Each">098e1dc5c3e232002841b63b12d3ae33</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-05 18:11:24</sys_created_on>
+        <sys_id>8ee82ca90735301039ecf87e7c1ed007</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-05 18:11:24</sys_updated_on>
+        <ui_id>b80f5da1-d91e-4d91-877e-8e50846b2373</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=8ee82ca90735301039ecf87e7c1ed007"/>
+    <sys_element_mapping action="delete_multiple" query="id=8ee82ca90735301039ecf87e7c1ed007"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>items</field>
+        <id>8ee82ca90735301039ecf87e7c1ed007</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-05 18:11:24</sys_created_on>
+        <sys_id>cee82ca90735301039ecf87e7c1ed00a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-05 18:11:24</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_098e1dc5c3e232002841b63b12d3ae33</table>
+        <value>{{eeeb5674-0828-4a04-8d52-2a3724b42194.vaccine_vials}}</value>
+    </sys_element_mapping>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_f1e8e8a90735301039ecf87e7c1ed0dd^sys_idNOT INf5e82ca90735301039ecf87e7c1ed001"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>vaccine_batch_record</element>
+        <help/>
+        <hint/>
+        <label>Vaccine batch record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_f1e8e8a90735301039ecf87e7c1ed0dd</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-05 18:11:24</sys_created_on>
+        <sys_id>f5e82ca90735301039ecf87e7c1ed001</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Vaccine Manufacturing &amp; Logistics" source="x_snc_vac_mfgr_lab">987c7518db932c1007b9200c0b9619d7</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Vaccine Manufacturing &amp; Logistics">987c7518db932c1007b9200c0b9619d7</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-05 18:11:24</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+</record_update>

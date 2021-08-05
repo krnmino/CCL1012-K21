@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_api_operation">
+    <sys_api_operation action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <api_collection display_value="Rest trigger for flow id=d8380d2107b5301039ecf87e7c1ed0c4 - v1">019ac9a107b5301039ecf87e7c1ed0f9</api_collection>
+        <api_request display_value="Generated Request for d8380d2107b5301039ecf87e7c1ed0c4">4d9ac9a1d7b530108fbc5a9f7c0128f8</api_request>
+        <api_security_scheme/>
+        <deprecated>false</deprecated>
+        <description/>
+        <execute_asynchronously>true</execute_asynchronously>
+        <execution_record>d8380d2107b5301039ecf87e7c1ed0c4</execution_record>
+        <execution_type>sys_hub_flow</execution_type>
+        <http_method>post</http_method>
+        <name>POST /</name>
+        <operation_id/>
+        <path>/</path>
+        <sys_class_name>sys_api_operation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-05 20:38:32</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>959ac9a107b5301039ecf87e7c1ed0ff</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>POST /</sys_name>
+        <sys_package display_value="Vaccine Manufacturing &amp; Logistics" source="x_snc_vac_mfgr_lab">987c7518db932c1007b9200c0b9619d7</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Vaccine Manufacturing &amp; Logistics">987c7518db932c1007b9200c0b9619d7</sys_scope>
+        <sys_update_name>sys_api_operation_959ac9a107b5301039ecf87e7c1ed0ff</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-05 20:38:32</sys_updated_on>
+    </sys_api_operation>
+</record_update>
